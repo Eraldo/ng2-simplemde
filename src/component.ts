@@ -43,7 +43,7 @@ export class Simplemde extends NgModelBase implements AfterViewInit, OnDestroy {
   writeValue(v: any) {
     if (v !== this._innerValue) {
       this._innerValue = v
-      if (this.value != null) {
+      if (this.simplemde && this.value != null) {
         this.simplemde.value(this.value)
       }
     }
